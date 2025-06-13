@@ -26,8 +26,8 @@ jobs:
     - name: Build, tag, and push app image
       run: |
         docker build -t webapp -f ./webapp/Dockerfile ./webapp
-        docker tag webapp:latest 420397414401.dkr.ecr.us-east-1.amazonaws.com/app_repo
-        docker push 420397414401.dkr.ecr.us-east-1.amazonaws.com/app_repo
+        docker tag webapp:latest 420397414401.dkr.ecr.us-east-1.amazonaws.com/webapp
+        docker push 420397414401.dkr.ecr.us-east-1.amazonaws.com/webapp
 
     - name: Pull and push MySQL image
       run: |
