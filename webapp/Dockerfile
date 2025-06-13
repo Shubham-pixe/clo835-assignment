@@ -1,7 +1,7 @@
-FROM node:18-alpine
+FROM python:3.8-slim
 WORKDIR /app
-COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 8080
-CMD ["sh", "-c", "BG_COLOR=$BG_COLOR npm start"]
+COPY . /app
 COPY templates/ /app/templates/
+RUN pip install -r requirements.txt
+ENV FLASK_APP=app.py
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8080"]
