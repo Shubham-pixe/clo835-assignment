@@ -1,4 +1,5 @@
 name: Build and Push Docker Images
+run: docker build -t webapp -f ./webapp/Dockerfile ./webapp
 
 on:
   push:
