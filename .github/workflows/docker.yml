@@ -32,5 +32,5 @@ jobs:
     - name: Pull and push MySQL image
       run: |
         docker pull mysql
-        docker tag mysql:latest 420397414401.dkr.ecr.us-east-1.amazonaws.com/mysql_repo
-        docker push 420397414401.dkr.ecr.us-east-1.amazonaws.com/mysql_repo
+        docker tag mysql:latest 420397414401.dkr.ecr.us-east-1.amazonaws.com/mysql
+        docker push 420397414401.dkr.ecr.us-east-1.amazonaws.com/mysql
